@@ -10,6 +10,7 @@ const logUtil = require("./utils/log_util");
 const router = require('./app/routes/index');
 
 const api = require("./app/routes");
+const response_formatter = require("./app/middleware/response_formatter");
 
 
 // error handler
@@ -41,6 +42,9 @@ app.use(require('koa-static')(__dirname + '/public'))
 app.use(views(__dirname + '/views', {
   extension: 'pug'
 }))
+
+// add middlewares
+app.use(response_formatter('^/user'));
 
 // routes
 app.use(router.routes(), router.allowedMethods());

@@ -1,0 +1,22 @@
+[2018-03-16T18:07:44.501] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl: /user/getUser
+request ip: ::1
+request query: {}
+response status: 200
+response body: 
+{"code":0,"message":"success","data":{"username":"nick","age":24}}
+*************** response log end ***************
+
+[2018-03-16T18:20:08.297] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl: /user/getUser
+request ip: ::1
+request query: {}
+response status: 200
+response body: 
+{"code":0,"message":"success","data":{"username":"nick","age":24}}
+*************** response log end ***************
+

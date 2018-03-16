@@ -20,3 +20,14 @@ response body:
 {"_readableState":{"objectMode":false,"highWaterMark":65536,"buffer":{"head":null,"tail":null,"length":0},"length":0,"pipes":null,"pipesCount":0,"flowing":null,"ended":false,"endEmitted":false,"reading":false,"sync":true,"needReadable":false,"emittedReadable":false,"readableListening":false,"resumeScheduled":false,"destroyed":false,"defaultEncoding":"utf8","awaitDrain":0,"readingMore":false,"decoder":null,"encoding":null},"readable":true,"domain":null,"_events":{},"_eventsCount":2,"path":"/Users/nick/Downloads/nodeLearn/koa_learn/HelloKoa2/public/stylesheets/style.css","fd":null,"flags":"r","mode":438,"autoClose":true,"bytesRead":0}
 *************** response log end ***************
 
+[2018-03-16T17:57:15.009] [INFO] resLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl: /user/getUser
+request ip: ::1
+request query: {}
+response status: 200
+response body: 
+{"username":"nick","age":24}
+*************** response log end ***************
+

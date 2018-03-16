@@ -7,8 +7,10 @@ const bodyparser = require('koa-bodyparser')
 // const logger = require('koa-logger')
 const logUtil = require("./utils/log_util");
 
-const index = require('./routes/index')
-const users = require('./routes/users')
+const router = require('./app/routes/index');
+
+const api = require("./app/routes");
+
 
 // error handler
 onerror(app)
@@ -40,21 +42,13 @@ app.use(views(__dirname + '/views', {
   extension: 'pug'
 }))
 
-// logger
-app.use(async (ctx, next) => {
-  const start = new Date()
-  await next()
-  const ms = new Date() - start
-  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
-})
-
 // routes
-app.use(index.routes(), index.allowedMethods())
-app.use(users.routes(), users.allowedMethods())
+app.use(router.routes(), router.allowedMethods());
 
 // error-handling
 app.on('error', (err, ctx) => {
   console.error('server error', err, ctx)
 });
+
 
 module.exports = app
